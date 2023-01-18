@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E400109-8034-4F9E-9D97-AEA4248756DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Loja_VesteBem</RootNamespace>
+    <AssemblyName>Loja VesteBem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Base\Connection.cs" />
+    <Compile Include="DB\Base\Database.cs" />
+    <Compile Include="DB\Entregas\EntregasBusiness.cs" />
+    <Compile Include="DB\Entregas\EntregasConsultarView.cs" />
+    <Compile Include="DB\Entregas\EntregasDatabase.cs" />
+    <Compile Include="DB\Entregas\EntregasDTO.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorBusiness.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorConsultarView.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorDatabase.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorDTO.cs" />
+    <Compile Include="DB\Login\LoginBusiness.cs" />
+    <Compile Include="DB\Login\LoginDatabase.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemBusiness.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemDatabase.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoConsultarView.cs" />
+    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoConsultarView.cs" />
+    <Compile Include="DB\Produto\ProdutoDatabase.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Registrar usuario\UsuarioBusiness.cs" />
+    <Compile Include="DB\Registrar usuario\UsuarioDatabase.cs" />
+    <Compile Include="DB\Registrar usuario\UsuarioDTO.cs" />
+    <Compile Include="DB\Registrar usuario\UsuarioView.cs" />
+    <Compile Include="Telas\Cadastrar Adiministrador\frmCadastrarADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastrar Adiministrador\frmCadastrarADM.Designer.cs">
+      <DependentUpon>frmCadastrarADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultar Cliente ADM\frmConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar Cliente ADM\frmConsultarCliente.Designer.cs">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultar Pedidos\frmConsultarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar Pedidos\frmConsultarPedido.Designer.cs">
+      <DependentUpon>frmConsultarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultar Produtos ADM\frmConsultarProdutoADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar Produtos ADM\frmConsultarProdutoADM.Designer.cs">
+      <DependentUpon>frmConsultarProdutoADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Entrega\frmEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Entrega\frmEntregas.Designer.cs">
+      <DependentUpon>frmEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Login Registrar\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Login Registrar\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Login Registrar\frmRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Login Registrar\frmRegistrar.Designer.cs">
+      <DependentUpon>frmRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Consultar Fornecedores ADM\frmConsultarFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar Fornecedores ADM\frmConsultarFornecedores.Designer.cs">
+      <DependentUpon>frmConsultarFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultar pedido ADM\frmConsultarPedidoADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar pedido ADM\frmConsultarPedidoADM.Designer.cs">
+      <DependentUpon>frmConsultarPedidoADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultar Produtos\frmConsultarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultar Produtos\frmConsultarProdutos.Designer.cs">
+      <DependentUpon>frmConsultarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedores\frmCadastrarFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedores\frmCadastrarFornecedores.Designer.cs">
+      <DependentUpon>frmCadastrarFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menu ADM\frmMenuADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Menu ADM\frmMenuADM.Designer.cs">
+      <DependentUpon>frmMenuADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menu Cliente\frmMenuCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Menu Cliente\frmMenuCliente.Designer.cs">
+      <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menu Inicial\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Menu Inicial\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Produto\frmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Produto\frmCadastrarProduto.Designer.cs">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Pedido\frmCadastrarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Pedido\frmCadastrarPedido.Designer.cs">
+      <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSession.cs" />
+    <EmbeddedResource Include="Telas\Cadastrar Adiministrador\frmCadastrarADM.resx">
+      <DependentUpon>frmCadastrarADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultar Cliente ADM\frmConsultarCliente.resx">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultar Pedidos\frmConsultarPedido.resx">
+      <DependentUpon>frmConsultarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultar Produtos ADM\frmConsultarProdutoADM.resx">
+      <DependentUpon>frmConsultarProdutoADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Entrega\frmEntregas.resx">
+      <DependentUpon>frmEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Login Registrar\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Login Registrar\frmRegistrar.resx">
+      <DependentUpon>frmRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Telas\Consultar Fornecedores ADM\frmConsultarFornecedores.resx">
+      <DependentUpon>frmConsultarFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultar pedido ADM\frmConsultarPedidoADM.resx">
+      <DependentUpon>frmConsultarPedidoADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultar Produtos\frmConsultarProdutos.resx">
+      <DependentUpon>frmConsultarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedores\frmCadastrarFornecedores.resx">
+      <DependentUpon>frmCadastrarFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menu ADM\frmMenuADM.resx">
+      <DependentUpon>frmMenuADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menu Cliente\frmMenuCliente.resx">
+      <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menu Inicial\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Pedido\frmCadastrarPedido.resx">
+      <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Produto\frmCadastrarProduto.resx">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo1 logo1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo1 logo2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo2 logo1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 1 2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Base\SCRIPT.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
